@@ -1,0 +1,16 @@
+﻿<Page
+    x:Class="RadComboBoxTest.TestRadTreeListView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:local="clr-namespace:RadComboBoxTest">
+
+    <Grid Margin="100">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ContentControl Content="RadTreeListView" Foreground="#FFD59851" Background="#FFBFA383" Style="{StaticResource HeaderControl_Style}"/>
+        <telerik:RadTreeListView x:Name="radTreeListView" CustomLayout="True" Grid.Row="1" ItemsSource="{Binding WarehouseItems}" Width="680" Height="270"/>
+    </Grid>
+</Page>

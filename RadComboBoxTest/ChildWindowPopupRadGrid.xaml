@@ -1,0 +1,191 @@
+﻿<ChildWindow x:Class="RadComboBoxTest.ChildWindowPopupRadGrid"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:telerikWindowsControls="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls"
+           xmlns:telerikWindowsControlsInput="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Input" 
+           xmlns:telerikWindowsControlsGridView="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.GridView"
+           Title="ChildWindowPopupRadGrid" Width="300"
+           Style="{StaticResource ChildWindowStyle}"
+           xmlns:local="clr-namespace:RadComboBoxTest">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Button x:Name="CancelButton" Content="Cancel" Click="CancelButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+            <Button x:Name="OKButton" Content="OK" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,79,0" Grid.Row="1" />
+        </StackPanel>
+
+        <Border x:Name="BorderMain" Style="{StaticResource BorderStyle}" Grid.Row="3" Margin="2,2,2,28" Grid.RowSpan="3">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <telerikWindowsControlsGridView:RadGridView Grid.Row="1" x:Name="theRadGrid" IsFilteringAllowed="True" Margin="0,0,0,0" RowIndicatorVisibility="Collapsed"
+                                                        Padding="0,0,0,0" ShowGroupPanel="False" AutoGenerateColumns="False" FontSize="12" 
+                                                        CanUserDeleteRows="False" CanUserInsertRows="False" IsReadOnly="True" CanUserSelect="False"
+                                                            CustomLayout="True" IsAutoHeightOnCustomLayout="True" MaxHeight="250"
+                                                        >
+                    <telerikWindowsControlsGridView:RadGridView.Columns>
+
+                        <telerikWindowsControlsGridView:GridViewDataColumn UniqueName="ButtonColumnBatch">
+                            <telerikWindowsControlsGridView:GridViewDataColumn.Header>
+                                <Grid>
+                                    <TextBlock Text=""/>
+                                </Grid>
+                            </telerikWindowsControlsGridView:GridViewDataColumn.Header>
+                            <telerikWindowsControlsGridView:GridViewDataColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <!-- <ColumnDefinition /> -->
+                                            <ColumnDefinition />
+                                            <ColumnDefinition />
+                                            <ColumnDefinition />
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+
+                                        <!-- <CheckBox x:Name="CheckBoxUnir" Checked="CheckBoxUnir_Checked"  Unchecked="CheckBoxUnir_Unchecked"  VerticalAlignment="Center" HorizontalAlignment="Center" /> -->
+                                        <telerikWindowsControls:RadButton Grid.Column="0" x:Name="RadButtonEditar" Content="Ed" Style="{StaticResource RadGridViewMainPageRadButtonStyle}" >
+                                            <ToolTipService.ToolTip>
+                                                <ToolTip>
+                                                    <TextBlock Text="Editar" Width="50"/>
+                                                </ToolTip>
+                                            </ToolTipService.ToolTip>
+                                        </telerikWindowsControls:RadButton>
+                                    </Grid>
+                                </DataTemplate>
+
+                            </telerikWindowsControlsGridView:GridViewDataColumn.CellTemplate>
+                        </telerikWindowsControlsGridView:GridViewDataColumn>
+
+                        <telerikWindowsControlsGridView:GridViewDataColumn Width="100">
+                            <telerikWindowsControlsGridView:GridViewDataColumn.Header>
+                                <Grid>
+                                    <TextBlock Text="Secuencia" Style="{StaticResource HeaderRollingMillStopsControlTextBlockStyle}" Width="100"/>
+                                </Grid>
+                            </telerikWindowsControlsGridView:GridViewDataColumn.Header>
+
+                            <telerikWindowsControlsGridView:GridViewDataColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Sequencia}" Style="{StaticResource LabelLaminacionConsuntaSecuenciasEntrada}" />
+                                </DataTemplate>
+                            </telerikWindowsControlsGridView:GridViewDataColumn.CellTemplate>
+                        </telerikWindowsControlsGridView:GridViewDataColumn>
+
+                        <telerikWindowsControlsGridView:GridViewDataColumn Width="100" >
+                            <telerikWindowsControlsGridView:GridViewDataColumn.Header>
+                                <Grid>
+                                    <TextBlock Text="Colada" Style="{StaticResource HeaderRollingMillStopsControlTextBlockStyle}" Width="100" />
+                                </Grid>
+                            </telerikWindowsControlsGridView:GridViewDataColumn.Header>
+
+                            <telerikWindowsControlsGridView:GridViewDataColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding CastingNumber}" Style="{StaticResource LabelLaminacionConsuntaSecuenciasEntrada}"/>
+                                </DataTemplate>
+                            </telerikWindowsControlsGridView:GridViewDataColumn.CellTemplate>
+                        </telerikWindowsControlsGridView:GridViewDataColumn>
+
+                        <telerikWindowsControlsGridView:GridViewDataColumn Width="75" >
+                            <telerikWindowsControlsGridView:GridViewDataColumn.Header>
+                                <Grid>
+                                    <TextBlock Text="H. Inic." Style="{StaticResource HeaderRollingMillStopsControlTextBlockStyle}" Width="75"/>
+                                </Grid>
+                            </telerikWindowsControlsGridView:GridViewDataColumn.Header>
+
+                            <telerikWindowsControlsGridView:GridViewDataColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding TimeFurnaceBeginEntry}" Style="{StaticResource LabelRollingMillStopsControlTextBlockStyle}" />
+                                </DataTemplate>
+                            </telerikWindowsControlsGridView:GridViewDataColumn.CellTemplate>
+                        </telerikWindowsControlsGridView:GridViewDataColumn>
+
+                        <telerikWindowsControlsGridView:GridViewDataColumn Width="75">
+                            <telerikWindowsControlsGridView:GridViewDataColumn.Header>
+                                <Grid>
+                                    <TextBlock Text="H. Fin." Style="{StaticResource HeaderRollingMillStopsControlTextBlockStyle}" Width="75"/>
+                                </Grid>
+                            </telerikWindowsControlsGridView:GridViewDataColumn.Header>
+
+                            <telerikWindowsControlsGridView:GridViewDataColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding TimeFurnaceEndEntry}" Style="{StaticResource LabelRollingMillStopsControlTextBlockStyle}" />
+                                </DataTemplate>
+                            </telerikWindowsControlsGridView:GridViewDataColumn.CellTemplate>
+                        </telerikWindowsControlsGridView:GridViewDataColumn>
+
+                        <telerikWindowsControlsGridView:GridViewDataColumn Width="200">
+                            <telerikWindowsControlsGridView:GridViewDataColumn.Header>
+                                <Grid>
+                                    <TextBlock Text="Modo" Style="{StaticResource HeaderRollingMillStopsControlTextBlockStyle}" Width="200" />
+                                </Grid>
+                            </telerikWindowsControlsGridView:GridViewDataColumn.Header>
+
+                            <telerikWindowsControlsGridView:GridViewDataColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding IDBilletColdLoadModeTxt}" Style="{StaticResource LabelLaminacionConsuntaSecuenciasEntrada}" />
+                                </DataTemplate>
+                            </telerikWindowsControlsGridView:GridViewDataColumn.CellTemplate>
+                        </telerikWindowsControlsGridView:GridViewDataColumn>
+
+                        <telerikWindowsControlsGridView:GridViewDataColumn Width="35">
+                            <telerikWindowsControlsGridView:GridViewDataColumn.Header>
+                                <Grid>
+                                    <TextBlock Text="Pals." Style="{StaticResource HeaderRollingMillStopsControlTextBlockStyle}" Width="35" />
+                                </Grid>
+                            </telerikWindowsControlsGridView:GridViewDataColumn.Header>
+
+                            <telerikWindowsControlsGridView:GridViewDataColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding CountBillett}" Style="{StaticResource LabelRollingMillStopsControlTextBlockStyle}" TextAlignment="Left" />
+                                </DataTemplate>
+                            </telerikWindowsControlsGridView:GridViewDataColumn.CellTemplate>
+                        </telerikWindowsControlsGridView:GridViewDataColumn>
+
+                        <telerikWindowsControlsGridView:GridViewDataColumn Width="200">
+                            <telerikWindowsControlsGridView:GridViewDataColumn.Header>
+                                <Grid>
+                                    <TextBlock Text="Modo 2" Style="{StaticResource HeaderRollingMillStopsControlTextBlockStyle}" Width="200" />
+                                </Grid>
+                            </telerikWindowsControlsGridView:GridViewDataColumn.Header>
+
+                            <telerikWindowsControlsGridView:GridViewDataColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding IDBilletColdLoadMode2Txt}" Style="{StaticResource LabelLaminacionConsuntaSecuenciasEntrada}"  />
+                                </DataTemplate>
+                            </telerikWindowsControlsGridView:GridViewDataColumn.CellTemplate>
+                        </telerikWindowsControlsGridView:GridViewDataColumn>
+
+                        <telerikWindowsControlsGridView:GridViewDataColumn Width="50">
+                            <telerikWindowsControlsGridView:GridViewDataColumn.Header>
+                                <Grid>
+                                    <TextBlock Text="Pals. 2" Style="{StaticResource HeaderRollingMillStopsControlTextBlockStyle}" Width="50" />
+                                </Grid>
+                            </telerikWindowsControlsGridView:GridViewDataColumn.Header>
+
+                            <telerikWindowsControlsGridView:GridViewDataColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding CountBillett2}" Style="{StaticResource LabelRollingMillStopsControlTextBlockStyle}" TextAlignment="Left" />
+                                </DataTemplate>
+                            </telerikWindowsControlsGridView:GridViewDataColumn.CellTemplate>
+                        </telerikWindowsControlsGridView:GridViewDataColumn>
+
+                    </telerikWindowsControlsGridView:RadGridView.Columns>
+
+                </telerikWindowsControlsGridView:RadGridView>
+
+
+                <Grid x:Name="theGrid" Grid.Row="1">
+                </Grid>
+            </Grid>
+        </Border>
+
+        </Grid>
+</ChildWindow>

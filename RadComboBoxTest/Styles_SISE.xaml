@@ -1,0 +1,567 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:RadComboBoxTest"
+    xmlns:telerikWindowsControls="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls"
+    xmlns:telerikWindowsControlsInput="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Input"
+    xmlns:telerikWindowsControlsDocking="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Docking">
+
+    <Binding x:Key="BindingConverterCulture" ConverterCulture="es-ES" />
+
+    <!--<local:RollingMillShiftsBusinessStateStyleConverter x:Key="RollingMillShiftsBusinessStateStyleConverter" />-->
+
+    <SolidColorBrush x:Key="SolidColorBrushBorder"              Color="#008000"  />
+    <SolidColorBrush x:Key="SolidColorBrushBackground"          Color="#008000"  />
+    <SolidColorBrush x:Key="SolidColorBrushBackgroundBorder"    Color="#008000"  />
+    <SolidColorBrush x:Key="SolidColorBrushBackgroundButton"    Color="#008000"  />
+    <SolidColorBrush x:Key="SolidColorBrushForeground"          Color="#FFFFFF"  />
+    <SolidColorBrush x:Key="SolidColorBrushForegroundButton"    Color="#FFFFFF"  />
+    <SolidColorBrush x:Key="SolidColorBrushForeground2"         Color="#008000"  />
+    <FontFamily x:Key="FontFamilyApplication">Tahoma</FontFamily>
+
+    <Style x:Key="TitleTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="{StaticResource SolidColorBrushForeground2}" />
+    </Style>
+
+    <Style x:Key="TitleTextBlockStyle2" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="{StaticResource SolidColorBrushBackground}" />
+    </Style>
+
+    <Style x:Key="SubTitleTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="{StaticResource SolidColorBrushForeground}" />
+    </Style>
+
+    <Style x:Key="SubTitleTextBlockStyle2" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="{StaticResource SolidColorBrushForeground}" />
+    </Style>
+
+    <Style x:Key="BorderStyle" TargetType="Border" >
+        <Setter Property="CornerRadius" Value="2" />
+        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="Margin" Value="2, 2, 2, 2" />
+        <Setter Property="BorderBrush" Value="{StaticResource SolidColorBrushBorder}" />
+        <Setter Property="Background" Value="{StaticResource SolidColorBrushBackgroundBorder}" />
+    </Style>
+
+    <Style x:Key="RadDockingStyle" TargetType="telerikWindowsControlsDocking:RadDocking" >
+        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="BorderBrush" Value="{StaticResource SolidColorBrushBorder}" />
+        <Setter Property="Background" Value="{StaticResource SolidColorBrushBackgroundBorder}" />
+    </Style>
+    <Style x:Key="HeaderRadRadioButtonStyle" TargetType="telerikWindowsControls:RadRadioButton">
+        <Setter Property="Margin" Value="10 10 10 10" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Background" Value="{StaticResource SolidColorBrushBackgroundButton}" />
+        <Setter Property="Foreground" Value="{StaticResource SolidColorBrushForegroundButton}" />
+        <Setter Property="BorderBrush" Value="{StaticResource SolidColorBrushBorder}" />
+        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="CornerRadius" Value="2" />
+    </Style>
+    <Style x:Key="LabelTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="{StaticResource SolidColorBrushForeground}" />
+    </Style>
+    <Style x:Key="LabelTextBlockStyle2" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="Black" />
+    </Style>
+    <Style x:Key="LabelTextBlockStyle3" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+    <Style x:Key="UIntRadNumericUpDownStyle" TargetType="telerikWindowsControlsInput:RadNumericUpDown">
+        <Setter Property="Width" Value="50" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="ValueFormat" Value="Numeric" />
+        <Setter Property="Minimum" Value="0" />
+        <Setter Property="Margin" Value="10, 10, 10, 10" />
+        <Setter Property="BorderBrush" Value="{StaticResource SolidColorBrushBorder}" />
+        <Setter Property="BorderThickness" Value="2" />
+    </Style>
+    <Style x:Key="HeaderRadButtonStyle" TargetType="telerikWindowsControls:RadButton">
+        <Setter Property="Margin" Value="10 10 10 10" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Background" Value="{StaticResource SolidColorBrushBackgroundButton}" />
+        <Setter Property="Foreground" Value="{StaticResource SolidColorBrushForegroundButton}" />
+        <Setter Property="BorderBrush" Value="{StaticResource SolidColorBrushBorder}" />
+        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="CornerRadius" Value="2" />
+    </Style>
+    <Style x:Key="RadGridViewMainPageRadButtonStyle" TargetType="telerikWindowsControls:RadButton">
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="Black" />
+    </Style>
+    <Style x:Key="RefreshTimeTextBoxStyle" TargetType="TextBox">
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="Foreground" Value="{StaticResource SolidColorBrushForeground}" />
+        <Setter Property="BorderBrush" Value="{StaticResource SolidColorBrushBorder}" />
+        <Setter Property="Background" Value="{StaticResource SolidColorBrushBackgroundBorder}" />
+    </Style>
+    <Style x:Key="ChildWindowStyle" TargetType="ChildWindow">
+        <Setter Property="HasCloseButton" Value="False" />
+        <Setter Property="FontFamily" Value="{StaticResource FontFamilyApplication}" />
+        <Setter Property="FontSize" Value="15" />
+        <Setter Property="Foreground" Value="{StaticResource SolidColorBrushForeground}" />
+        <Setter Property="BorderBrush" Value="{StaticResource SolidColorBrushBorder}" />
+        <Setter Property="BorderThickness" Value="2" />
+    </Style>
+    <Style x:Key="ChildWindowStyle2" TargetType="ChildWindow">
+        <Setter Property="HasCloseButton" Value="False" />
+        <Setter Property="FontFamily" Value="{StaticResource FontFamilyApplication}" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Foreground" Value="{StaticResource SolidColorBrushForeground}" />
+        <Setter Property="BorderBrush" Value="{StaticResource SolidColorBrushBorder}" />
+        <Setter Property="BorderThickness" Value="2" />
+    </Style>
+    <Style x:Key="ExceptionChildWindowStyle" TargetType="ChildWindow">
+        <Setter Property="FontFamily" Value="{StaticResource FontFamilyApplication}" />
+    </Style>
+    <Style x:Key="CastingNumberTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="{StaticResource SolidColorBrushForeground}" />
+    </Style>
+    <Style x:Key="ChildWindowsRadButtonStyle" TargetType="telerikWindowsControls:RadButton">
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Width" Value="75" />
+        <Setter Property="Height" Value="23" />
+        <Setter Property="HorizontalAlignment" Value="Right" />
+        <Setter Property="Background" Value="{StaticResource SolidColorBrushBackgroundButton}" />
+        <Setter Property="Foreground" Value="{StaticResource SolidColorBrushForegroundButton}" />
+        <Setter Property="BorderBrush" Value="{StaticResource SolidColorBrushBorder}" />
+        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="CornerRadius" Value="2" />
+    </Style>
+    <Style x:Key="ChildWindowsRadButtonStyle2" TargetType="telerikWindowsControls:RadButton">
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="Width" Value="75" />
+        <Setter Property="Height" Value="23" />
+        <Setter Property="HorizontalAlignment" Value="Right" />
+        <Setter Property="Background" Value="{StaticResource SolidColorBrushBackgroundButton}" />
+        <Setter Property="Foreground" Value="{StaticResource SolidColorBrushForegroundButton}" />
+        <Setter Property="BorderBrush" Value="{StaticResource SolidColorBrushBorder}" />
+        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="CornerRadius" Value="2" />
+    </Style>
+    <Style x:Key="BorderStyleChildWindow" TargetType="Border" >
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="CornerRadius" Value="2" />
+        <Setter Property="BorderThickness" Value="2" />
+        <Setter Property="Margin" Value="2, 2, 2, 2" />
+        <Setter Property="BorderBrush" Value="{StaticResource SolidColorBrushBorder}" />
+        <Setter Property="Background" Value="{StaticResource SolidColorBrushBackgroundBorder}" />
+    </Style>
+    <Style x:Key="UserControlStyle" TargetType="UserControl">
+        <Setter Property="FontFamily" Value="{StaticResource FontFamilyApplication}" />
+    </Style>
+    <Style x:Key="UserControlStyle2" TargetType="UserControl">
+        <Setter Property="FontFamily" Value="{StaticResource FontFamilyApplication}" />
+        <Setter Property="FontSize"   Value="14" />
+    </Style>
+    <Style x:Key="GridStyle" TargetType="Grid">
+        <Setter Property="Background" Value="{StaticResource SolidColorBrushBackgroundBorder}" />
+    </Style>
+    <Style x:Key="HeaderItemCastingAnalysesControlTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="9"/>
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="Width" Value="30"/>
+    </Style>
+    <Style x:Key="MessageTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="Foreground" Value="Red" />
+        <Setter Property="TextAlignment" Value="Center" />
+    </Style>
+    <Style x:Key="MessageTextBlockStyle2" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="Foreground" Value="Red" />
+        <Setter Property="TextAlignment" Value="Center" />
+    </Style>
+    <Style x:Key="CheckBoxStyle" TargetType="CheckBox">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Margin" Value="2, 0, 2, 0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{StaticResource SolidColorBrushForeground}" />
+    </Style>
+    <Style x:Key="CheckBoxStyle2" TargetType="CheckBox">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Margin" Value="2, 0, 2, 0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{StaticResource SolidColorBrushForeground}" />
+    </Style>
+    <Style x:Key="ValueHeaderTextBoxStyle" TargetType="TextBox">
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="IsReadOnly" Value="True" />
+    </Style>
+    <Style x:Key="LabelRollingMillStopsControlTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="TextAlignment" Value="Right" />
+        <Setter Property="Width" Value="30"/>
+    </Style>
+    <Style x:Key="LabelLaminacionConsuntaSecuenciasEntrada" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="Width" Value="100"/>
+    </Style>
+    <Style x:Key="LabelItemCastingStopsControlTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="TextAlignment" Value="Right" />
+        <Setter Property="Width" Value="40"/>
+    </Style>
+    <Style x:Key="HeaderRollingMillStopsControlTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="Foreground" Value="Blue" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="Width" Value="40"/>
+    </Style>
+    <Style x:Key="HeaderProcessBilletsTempcoreMeasureTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="8"/>
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="Width" Value="50"/>
+    </Style>
+    <Style x:Key="TimeRadMaskedTextBoxStyle" TargetType="telerikWindowsControlsInput:RadMaskedTextInput">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Mask" Value="HH:mm:ss"/>
+        <Setter Property="Width" Value="60"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+    </Style>
+    <Style x:Key="TimeRadMaskedTextBoxStyle2" TargetType="telerikWindowsControlsInput:RadMaskedTextInput">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="Mask" Value="HH:mm:ss"/>
+        <Setter Property="Width" Value="60"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+    </Style>
+    <Style x:Key="ReadOnlyShortDateRadMaskedTextBoxStyle" TargetType="telerikWindowsControlsInput:RadMaskedTextInput">
+        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="Mask" Value="dd/MM/yyyy"/>
+        <Setter Property="Width" Value="60"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="Background" Value="LightGray" />
+    </Style>
+    <Style x:Key="ReadOnlyShortDateTimeRadMaskedTextBoxStyle" TargetType="telerikWindowsControlsInput:RadMaskedTextInput">
+        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="Mask" Value="dd/MM/yyyy HH:mm:ss"/>
+        <Setter Property="Width" Value="60"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="Background" Value="LightGray" />
+    </Style>
+    <Style x:Key="ReadOnlyTimeRadMaskedTextBoxStyle" TargetType="telerikWindowsControlsInput:RadMaskedTextInput">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Mask" Value="HH:mm:ss"/>
+        <Setter Property="Width" Value="60"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="Background" Value="LightGray" />
+    </Style>
+    <Style x:Key="ReadOnlyTimeRadMaskedTextBoxStyle2" TargetType="telerikWindowsControlsInput:RadMaskedTextInput">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="Mask" Value="HH:mm:ss"/>
+        <Setter Property="Width" Value="60"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="Background" Value="LightGray" />
+    </Style>
+    <Style x:Key="ShortTimeRadMaskedTextBoxStyle" TargetType="telerikWindowsControlsInput:RadMaskedTextInput">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Mask" Value="HH:mm"/>
+        <Setter Property="Width" Value="60"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+    </Style>
+    <Style x:Key="ShortTimeRadMaskedTextBoxStyle2" TargetType="telerikWindowsControlsInput:RadMaskedTextInput">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="Mask" Value="HH:mm"/>
+        <Setter Property="Width" Value="60"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+    </Style>
+    <Style x:Key="ReadOnlyShortTimeRadMaskedTextBoxStyle" TargetType="telerikWindowsControlsInput:RadMaskedTextInput">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Mask" Value="HH:mm"/>
+        <Setter Property="Width" Value="60"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="Background" Value="LightGray" />
+    </Style>
+    <Style x:Key="DateRadDatePickerBoxStyle" TargetType="telerikWindowsControlsInput:RadDatePicker">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Width" Value="100"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+    </Style>
+    <Style x:Key="ReadOnlyDateRadDatePickerBoxStyle" TargetType="telerikWindowsControlsInput:RadDatePicker">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Width" Value="100"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+
+        <Setter Property="Background" Value="LightGray" />
+    </Style>
+    <Style x:Key="ReadOnlyIntRadMaskedTextBoxStyle" TargetType="telerikWindowsControlsInput:RadMaskedTextInput">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Mask" Value="d" />
+        <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        <Setter Property="Background" Value="LightGray" />
+    </Style>
+    <Style x:Key="IntRadMaskedTextBoxStyle" TargetType="telerikWindowsControlsInput:RadMaskedTextInput">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Mask" Value="d" />
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        <Setter Property="SelectionOnFocus" Value="SelectAll"/>
+    </Style>
+    <!--<Style x:Key="ShortRealRadMaskedTextBoxStyle" TargetType="telerikWindowsControlsInput:RadMaskedTextBox" >
+            <Setter Property="FontSize"                     Value="12"/>
+            <Setter Property="Width"                        Value="50"/>
+            <Setter Property="HorizontalAlignment"          Value="Center"/>
+            <Setter Property="VerticalAlignment"            Value="Center"/>
+            <Setter Property="Mask"                         Value="n2" />
+            <Setter Property="Value"                        Value="10.00" />
+        </Style>-->
+    <Style x:Key="ReadOnlyNumericRadMaskedTextBoxStyle" TargetType="telerikWindowsControlsInput:RadMaskedTextInput">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        <Setter Property="Background" Value="LightGray" />
+    </Style>
+    <Style x:Key="ReadOnlyLongNumericRadMaskedTextBoxStyle" TargetType="telerikWindowsControlsInput:RadMaskedTextInput">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Width" Value="80"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        <Setter Property="Background" Value="LightGray" />
+    </Style>
+    <!--
+        <Style x:Key="SubTitleTextBlockStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="4, 4, 4, 4" />
+            <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+        -->
+    <Style x:Key="NormalRadComboBoxStyle" TargetType="telerikWindowsControlsInput:RadComboBox">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Width" Value="230"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="IsEditable" Value="True"/>
+    </Style>
+    <Style x:Key="ReadOnlyNormalRadComboBoxStyle" TargetType="telerikWindowsControlsInput:RadComboBox">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Width" Value="230"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="IsEditable" Value="True"/>
+        <Setter Property="IsEnabled" Value="False" />
+    </Style>
+    <Style x:Key="ShortRadComboBoxStyle" TargetType="telerikWindowsControlsInput:RadComboBox">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Width" Value="70"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="IsEditable" Value="True"/>
+    </Style>
+    <Style x:Key="ReadOnlyShortRadComboBoxStyle" TargetType="telerikWindowsControlsInput:RadComboBox">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Width" Value="70"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="IsEditable" Value="True"/>
+        <Setter Property="IsEnabled" Value="False" />
+    </Style>
+    <Style x:Key="RadComboBoxStyle" TargetType="telerikWindowsControlsInput:RadComboBox">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="IsEditable" Value="True"/>
+        <Setter Property="Margin" Value="2, 2, 2, 2"/>
+    </Style>
+    <Style x:Key="ReadOnlyRadComboBoxStyle" TargetType="telerikWindowsControlsInput:RadComboBox">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="IsEditable" Value="True"/>
+        <Setter Property="Margin" Value="2, 2, 2, 2"/>
+        <Setter Property="IsEnabled" Value="False" />
+    </Style>
+    <Style x:Key="TextBoxStyle" TargetType="TextBox">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Margin" Value="2, 0, 2, 0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+    <Style x:Key="TextBoxStyle2" TargetType="TextBox">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="Margin" Value="2, 0, 2, 0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+    <Style x:Key="SmallTextBoxStyle" TargetType="TextBox">
+        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="Margin" Value="2, 0, 2, 0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+    <Style x:Key="ReadOnlyTextBoxStyle" TargetType="TextBox">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Margin" Value="2, 0, 2, 0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="Background" Value="LightGray" />
+    </Style>
+    <Style x:Key="ReadOnlyTextBoxStyle2" TargetType="TextBox">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="Margin" Value="2, 0, 2, 0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="Background" Value="LightGray" />
+    </Style>
+    <Style x:Key="ReadOnlySmallTextBoxStyle" TargetType="TextBox">
+        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="Margin" Value="2, 0, 2, 0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="IsReadOnly" Value="True" />
+        <Setter Property="Background" Value="LightGray" />
+    </Style>
+    <Style x:Key="ItemCastingAnalysesControlRadComboBoxStyle" TargetType="telerikWindowsControlsInput:RadComboBox">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="Width" Value="100"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="IsEditable" Value="True"/>
+    </Style>
+    <Style x:Key="RadMaskedTextBoxStyle" TargetType="telerikWindowsControlsInput:RadMaskedTextInput">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Width" Value="60"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        <Setter Property="SelectionOnFocus" Value="SelectAll"/>
+    </Style>
+    <Style x:Key="RadMaskedTextBoxStyle2" TargetType="telerikWindowsControlsInput:RadMaskedTextInput">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="Width" Value="60"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        <Setter Property="SelectionOnFocus" Value="SelectAll"/>
+    </Style>
+    <Style x:Key="RadMaskedTextBoxStyle3" TargetType="telerikWindowsControlsInput:RadMaskedTextInput">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Width" Value="220"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="SelectionOnFocus" Value="SelectAll"/>
+    </Style>
+    <Style x:Key="HeaderBillettDataTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="Width" Value="65"/>
+    </Style>
+    <Style x:Key="HeaderBillettDataTextBlockStyle2" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="10"/>
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="Width" Value="80"/>
+    </Style>
+</ResourceDictionary>

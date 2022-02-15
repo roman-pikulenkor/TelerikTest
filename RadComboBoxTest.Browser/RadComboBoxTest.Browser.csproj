@@ -1,0 +1,180 @@
+﻿
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <Configurations>Debug;Release;</Configurations>
+    <NoXamlPreprocessor>True</NoXamlPreprocessor>
+    <OpenSilverType>4</OpenSilverType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;OPENSILVER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;OPENSILVER</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AE8BCE6E-BA69-497B-91DF-C29DF7B8AB9B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RadComboBoxTest.Browser</RootNamespace>
+    <AssemblyName>RadComboBoxTest.Browser</AssemblyName>
+    <!--<TargetFrameworkVersion>v2.0</TargetFrameworkVersion>-->
+    <FileAlignment>512</FileAlignment>
+    <IsCSharpXamlForHtml5>true</IsCSharpXamlForHtml5>
+    <CSharpXamlForHtml5OutputType>Application</CSharpXamlForHtml5OutputType>
+    <IsCshtml5>true</IsCshtml5>
+    <Cshtml5OutputType>Application</Cshtml5OutputType>
+    <StartAction>Program</StartAction>
+    <StartProgram>
+    </StartProgram>
+    <StartArguments>"OpenSilver.dll"</StartArguments>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="EmptyOpenSilverMigrationApplication.Browser.csproj.vspscc" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" PrivateAssets="all" Version="6.0.0" />
+    <PackageReference Include="OpenSilver" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RadComboBoxTest\RadComboBoxTest.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="KendoUI.Common">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\KendoUI.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="KendoUI.Grid">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\KendoUI.Grid.dll</HintPath>
+    </Reference>
+    <Reference Include="KendoUI.Windows.Controls.GridView">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\KendoUI.Windows.Controls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Chart">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Controls.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Charting">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Controls.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Data">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Controls.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.DataVisualization">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Controls.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Docking">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Controls.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.DomainServices">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Controls.DomainServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewers">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Controls.FixedDocumentViewers.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.FixedDocumentViewersUI">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Controls.FixedDocumentViewersUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.GanttView">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Controls.GanttView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.GridView">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Controls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.ImageEditor">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Controls.ImageEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.RibbonView">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Controls.RibbonView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.RichTextBoxUI">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Controls.RichTextBoxUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.ScheduleView">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Controls.ScheduleView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Documents.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Documents.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Fixed">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Documents.Fixed.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Html">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Documents.FormatProviders.Html.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.MsRichTextBoxXaml">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Documents.FormatProviders.MsRichTextBoxXaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.OpenXml">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Documents.FormatProviders.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Pdf">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Documents.FormatProviders.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Rtf">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Documents.FormatProviders.Rtf.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.FormatProviders.Xaml">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Documents.FormatProviders.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Proofing">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Documents.Proofing.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.PersistenceFramework">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.PersistenceFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Scheduling.Core">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Scheduling.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip">
+      <HintPath>..\..\TelerikForOpenSilver\Binaries\OpenSilver\Debug\Telerik.Windows.Zip.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

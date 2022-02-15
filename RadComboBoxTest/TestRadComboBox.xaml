@@ -1,0 +1,229 @@
+﻿<Page
+    x:Class="RadComboBoxTest.TestRadComboBox"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:local="clr-namespace:RadComboBoxTest">
+    <Grid Margin="10" Width="500">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="400"/>
+        </Grid.RowDefinitions>
+        <telerik:RadTreeView x:Name="radTreeView" Grid.Row="0" Height="50" BorderThickness="1" BorderBrush="#ff00ffff" 
+                              CustomLayout="True" IsVirtualizing="True"
+                             IsDragDropEnabled="True">
+            <telerik:RadTreeViewItem Header="1.Futsal"/>
+            <telerik:RadTreeViewItem Header="2.Soccer"/>
+            <telerik:RadTreeViewItem Header="3.Futsal"/>
+            <telerik:RadTreeViewItem Header="4.Futsal"/>
+            <telerik:RadTreeViewItem Header="5.Soccer"/>
+            <telerik:RadTreeViewItem Header="6.Futsal"/>
+            <telerik:RadTreeViewItem Header="7.Futsal"/>
+            <telerik:RadTreeViewItem Header="8.Soccer"/>
+            <telerik:RadTreeViewItem Header="9.Futsal"/>
+        </telerik:RadTreeView>
+
+        <Button Click="UpdateButton_Click1" Content="Move on CSS" Grid.Row="1" Visibility="Collapsed"/>
+        <Button Click="UpdateButton_Click2" Content="Move on CustomLayout" Grid.Row="1"/>
+        
+        <telerik:RadTreeView x:Name="radTreeView_" Grid.Row="2" BorderThickness="1" BorderBrush="#ff00ffff" 
+                             CustomLayout="True" IsVirtualizing="True"
+                             IsDragDropEnabled="True">
+            <telerik:RadTreeViewItem Header="Football1" IsExpanded="True">
+                <telerik:RadTreeViewItem Header="1.Futsal"/>
+                <telerik:RadTreeViewItem Header="2.Soccer"/>
+                <telerik:RadTreeViewItem Header="3.Futsal"/>
+                <telerik:RadTreeViewItem Header="Football2">
+                    <telerik:RadTreeViewItem Header="1.Futsal"/>
+                    <telerik:RadTreeViewItem Header="2.Soccer"/>
+                    <telerik:RadTreeViewItem Header="3.Futsal"/>
+                    <telerik:RadTreeViewItem Header="Football3">
+                        <telerik:RadTreeViewItem Header="1.Futsal"/>
+                        <telerik:RadTreeViewItem Header="2.Soccer"/>
+                        <telerik:RadTreeViewItem Header="3.Futsal"/>
+                        <telerik:RadTreeViewItem Header="Football4">
+                            <telerik:RadTreeViewItem Header="1.Futsal"/>
+                            <telerik:RadTreeViewItem Header="2.Soccer"/>
+                            <telerik:RadTreeViewItem Header="3.Futsal"/>
+                            <telerik:RadTreeViewItem Header="Football5">
+                                <telerik:RadTreeViewItem Header="1.Futsal"/>
+                                <telerik:RadTreeViewItem Header="2.Soccer"/>
+                                <telerik:RadTreeViewItem Header="3.Futsal"/>
+                            </telerik:RadTreeViewItem>
+                            <telerik:RadTreeViewItem Header="Football">
+                                <telerik:RadTreeViewItem Header="1.Futsal"/>
+                                <telerik:RadTreeViewItem Header="2.Soccer"/>
+                                <telerik:RadTreeViewItem Header="3.Futsal"/>
+                            </telerik:RadTreeViewItem>
+                            <telerik:RadTreeViewItem Header="Tennis"/>
+                            <telerik:RadTreeViewItem Header="Cycling"/>
+                        </telerik:RadTreeViewItem>
+                    </telerik:RadTreeViewItem>
+                </telerik:RadTreeViewItem>
+            </telerik:RadTreeViewItem>
+        </telerik:RadTreeView>
+
+        <telerik:RadTreeView x:Name="radTreeView2" Grid.Row="3" CustomLayout="True"
+                             BorderThickness="1" BorderBrush="#ff00ffff" 
+                             IsVirtualizing="True" IsDragDropEnabled="True"
+                             VirtualizingStackPanel.VirtualizationMode="Recycling"
+                             SelectionMode="Multiple"
+                             >
+            <telerik:RadTreeViewItem Header="1.Football1" Name="treeViewItem1" IsExpanded="True">
+                <telerik:RadTreeViewItem Header="1-1.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-2.Soccer"/>
+                <telerik:RadTreeViewItem Header="1-3.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-4.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-5.Soccer"/>
+                <telerik:RadTreeViewItem Header="1-6.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-7.Futsal"/>
+                <!--<telerik:RadTreeViewItem Header="1-8.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-9.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-10.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-11.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-12.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-13.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-14.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-15.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-16.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-17.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-18.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-19.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-20.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-21.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-22.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-23.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-24.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-25.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-26.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-27.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-28.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-29.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-30.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-31.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-32.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-33.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-34.Futsal"/>
+                <telerik:RadTreeViewItem Header="1-35.Futsal"/>-->
+            </telerik:RadTreeViewItem>
+            <telerik:RadTreeViewItem Header="2.Football" Name="treeViewItem2" IsExpanded="True">
+                <telerik:RadTreeViewItem Header="2-1.Futsal"/>
+                <telerik:RadTreeViewItem Header="2-2.Soccer"/>
+                <telerik:RadTreeViewItem Header="2-3.Futsal"/>
+                <telerik:RadTreeViewItem Header="2-4.Futsal"/>
+                <telerik:RadTreeViewItem Header="2-5.Futsal"/>
+                <telerik:RadTreeViewItem Header="2-6.Futsal"/>
+            </telerik:RadTreeViewItem>
+            <telerik:RadTreeViewItem Header="4.Football" IsExpanded="True">
+                <telerik:RadTreeViewItem Header="3-1.Futsal"/>
+                <telerik:RadTreeViewItem Header="3-2.Soccer"/>
+                <telerik:RadTreeViewItem Header="3-3.Futsal"/>
+                <telerik:RadTreeViewItem Header="3-4.Futsal"/>
+                <telerik:RadTreeViewItem Header="3-5.Futsal"/>
+                <telerik:RadTreeViewItem Header="3-6.Futsal"/>
+                <telerik:RadTreeViewItem Header="3-7.Futsal"/>
+                <telerik:RadTreeViewItem Header="3-8.Futsal"/>
+                <telerik:RadTreeViewItem Header="3-9.Futsal"/>
+                <telerik:RadTreeViewItem Header="3-10.Futsal"/>
+            </telerik:RadTreeViewItem>
+            <telerik:RadTreeViewItem Header="5.Football">
+                <telerik:RadTreeViewItem Header="5-1.Futsal"/>
+                <telerik:RadTreeViewItem Header="5-2.Soccer"/>
+            </telerik:RadTreeViewItem>
+            <telerik:RadTreeViewItem Header="6.Football">
+                <telerik:RadTreeViewItem Header="6-1.Futsal"/>
+                <telerik:RadTreeViewItem Header="6-2.Soccer"/>
+            </telerik:RadTreeViewItem>
+            <telerik:RadTreeViewItem Header="7.Football">
+                <telerik:RadTreeViewItem Header="7-1.Futsal"/>
+                <telerik:RadTreeViewItem Header="7-2.Soccer"/>
+            </telerik:RadTreeViewItem>
+        </telerik:RadTreeView>
+
+        <!--<telerik:RadTreeView x:Name="radTreeView3" CustomLayout="True" Grid.Row="2" 
+                             Height="200" BorderThickness="1" BorderBrush="#ff00ffff">
+            <telerik:RadTreeViewItem Header="Sport Categories without Virtualization">
+                <telerik:RadTreeViewItem Header="Football">
+                    <telerik:RadTreeViewItem Header="1.Futsal"/>
+                    <telerik:RadTreeViewItem Header="2.Soccer"/>
+                    <telerik:RadTreeViewItem Header="3.Futsal"/>
+                    <telerik:RadTreeViewItem Header="4.Soccer"/>
+                    <telerik:RadTreeViewItem Header="5.Futsal"/>
+                    <telerik:RadTreeViewItem Header="6.Soccer"/>
+                    <telerik:RadTreeViewItem Header="7.Futsal"/>
+                    <telerik:RadTreeViewItem Header="8.Soccer"/>
+                    <telerik:RadTreeViewItem Header="9.Futsal"/>
+                    <telerik:RadTreeViewItem Header="10.Soccer"/>
+                    <telerik:RadTreeViewItem Header="11.Futsal"/>
+                    <telerik:RadTreeViewItem Header="12.Soccer"/>
+                    <telerik:RadTreeViewItem Header="13.Futsal"/>
+                    <telerik:RadTreeViewItem Header="14.Soccer"/>
+                    <telerik:RadTreeViewItem Header="15.Futsal"/>
+                    <telerik:RadTreeViewItem Header="16.Soccer"/>
+                    <telerik:RadTreeViewItem Header="17.Futsal"/>
+                    <telerik:RadTreeViewItem Header="18.Soccer"/>
+                    <telerik:RadTreeViewItem Header="19.Futsal"/>
+                    <telerik:RadTreeViewItem Header="20.Soccer"/>
+                    <telerik:RadTreeViewItem Header="21.Futsal"/>
+                    <telerik:RadTreeViewItem Header="22.Soccer"/>
+                    <telerik:RadTreeViewItem Header="23.Futsal"/>
+                    <telerik:RadTreeViewItem Header="24.Soccer"/>
+                    <telerik:RadTreeViewItem Header="25.Soccer"/>
+                    <telerik:RadTreeViewItem Header="26.Soccer"/>
+                    <telerik:RadTreeViewItem Header="27.Soccer"/>
+                    <telerik:RadTreeViewItem Header="28.Soccer"/>
+                    <telerik:RadTreeViewItem Header="29.Soccer"/>
+                    <telerik:RadTreeViewItem Header="30.Soccer"/>
+                    <telerik:RadTreeViewItem Header="31.Soccer"/>
+                    <telerik:RadTreeViewItem Header="32.Soccer"/>
+                    <telerik:RadTreeViewItem Header="33.Soccer"/>
+                    <telerik:RadTreeViewItem Header="34.Soccer"/>
+                    <telerik:RadTreeViewItem Header="35.Soccer"/>
+                    <telerik:RadTreeViewItem Header="36.Soccer"/>
+                    <telerik:RadTreeViewItem Header="37.Soccer"/>
+                    <telerik:RadTreeViewItem Header="38.Soccer"/>
+                    <telerik:RadTreeViewItem Header="39.Soccer"/>
+                    <telerik:RadTreeViewItem Header="40.Soccer"/>
+                    <telerik:RadTreeViewItem Header="41.Soccer"/>
+                    <telerik:RadTreeViewItem Header="42.Soccer"/>
+                    <telerik:RadTreeViewItem Header="43.Soccer"/>
+                    <telerik:RadTreeViewItem Header="44.Soccer"/>
+                    <telerik:RadTreeViewItem Header="45.Soccer"/>
+                    <telerik:RadTreeViewItem Header="46.Soccer"/>
+                    <telerik:RadTreeViewItem Header="47.Soccer"/>
+                    <telerik:RadTreeViewItem Header="48.Soccer"/>
+                    <telerik:RadTreeViewItem Header="49.Soccer"/>
+                    <telerik:RadTreeViewItem Header="50.Soccer"/>
+                </telerik:RadTreeViewItem>
+                <telerik:RadTreeViewItem Header="Tennis"/>
+                <telerik:RadTreeViewItem Header="Cycling"/>
+            </telerik:RadTreeViewItem>
+        </telerik:RadTreeView>-->
+
+        <!--<telerik:RadComboBox
+            Grid.Row="0"
+            Width="200"
+            Margin="10">
+            <telerik:RadComboBoxItem Content="Item 1" />
+            <telerik:RadComboBoxItem Content="Item 2" />
+            <telerik:RadComboBoxItem Content="Item 1" />
+            <telerik:RadComboBoxItem Content="Item 2" />
+            <telerik:RadComboBoxItem Content="Item 1" />
+            <telerik:RadComboBoxItem Content="Item 2" />
+            <telerik:RadComboBoxItem Content="Item 1" />
+            <telerik:RadComboBoxItem Content="Item 2" />
+            <telerik:RadComboBoxItem Content="Item 1" />
+            <telerik:RadComboBoxItem Content="Item 2" />
+            <telerik:RadComboBoxItem Content="Item 1" />
+            <telerik:RadComboBoxItem Content="Item 2" />
+            <telerik:RadComboBoxItem Content="Item 1" />
+            <telerik:RadComboBoxItem Content="Item 2" />
+            <telerik:RadComboBoxItem Content="Item 1" />
+            <telerik:RadComboBoxItem Content="Item 2" />
+            <telerik:RadComboBoxItem Content="Item 1" />
+            <telerik:RadComboBoxItem Content="Item 2" />
+        </telerik:RadComboBox>-->
+    </Grid>
+</Page>

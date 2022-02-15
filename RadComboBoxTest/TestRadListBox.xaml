@@ -1,0 +1,66 @@
+﻿<Page
+    x:Class="RadComboBoxTest.TestRadListBox"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:RadComboBoxTest">
+    
+    <Grid HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+        <Button Content="Add Items" Click="Button_Click"/>
+        
+        <telerik:RadListBox Grid.Row="1" Width="150" x:Name="radListBox" Height="150" CustomLayout="True" ItemsSource="{Binding BoxItems}">
+            
+            <telerik:RadListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel/>
+                </ItemsPanelTemplate>
+            </telerik:RadListBox.ItemsPanel>
+            
+            <!--<telerik:RadListBoxItem Content="1.Australia" />
+            <telerik:RadListBoxItem Content="2.Brazil" />
+            <telerik:RadListBoxItem Content="3.Canada" />
+            <telerik:RadListBoxItem Content="4.China" />
+            <telerik:RadListBoxItem Content="5.England" />
+            <telerik:RadListBoxItem Content="6.Germany" />
+            <telerik:RadListBoxItem Content="7.Australia" />
+            <telerik:RadListBoxItem Content="8.Brazil" />
+            <telerik:RadListBoxItem Content="9.Canada" />
+            <telerik:RadListBoxItem Content="10.China" />
+            <telerik:RadListBoxItem Content="11.England" />
+            <telerik:RadListBoxItem Content="12.Germany" />
+            <telerik:RadListBoxItem Content="13.Australia" />
+            <telerik:RadListBoxItem Content="14.Brazil" />
+            <telerik:RadListBoxItem Content="15.Canada" />
+            <telerik:RadListBoxItem Content="16.China" />
+            <telerik:RadListBoxItem Content="17.England" />
+            <telerik:RadListBoxItem Content="18.Germany" />
+            <telerik:RadListBoxItem Content="19.Australia" />-->
+
+            <!--<telerik:RadListBoxItem Content="20.Brazil" />
+            <telerik:RadListBoxItem Content="21.Canada" />
+            <telerik:RadListBoxItem Content="22.China" />
+            <telerik:RadListBoxItem Content="23.England" />
+            <telerik:RadListBoxItem Content="24.Germany" />
+            <telerik:RadListBoxItem Content="25.Australia" />
+            <telerik:RadListBoxItem Content="26.Brazil" />
+            <telerik:RadListBoxItem Content="27.Canada" />
+            <telerik:RadListBoxItem Content="28.China" />
+            <telerik:RadListBoxItem Content="29.England" />
+            <telerik:RadListBoxItem Content="30.Germany" />
+            <telerik:RadListBoxItem Content="31.Australia" />
+            <telerik:RadListBoxItem Content="32.Brazil" />
+            <telerik:RadListBoxItem Content="33.Canada" />
+            <telerik:RadListBoxItem Content="34.China" />
+            <telerik:RadListBoxItem Content="35.England" />
+            <telerik:RadListBoxItem Content="36.Germany" />
+            <telerik:RadListBoxItem Content="37.Australia" />
+            <telerik:RadListBoxItem Content="38.Brazil" />
+            <telerik:RadListBoxItem Content="39.Canada" />
+            <telerik:RadListBoxItem Content="40.China" />-->
+        </telerik:RadListBox>
+    </Grid>
+</Page>
