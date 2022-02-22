@@ -4,7 +4,7 @@
            xmlns:telerikWindowsControls="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls"
            xmlns:telerikWindowsControlsInput="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.Input" 
            xmlns:telerikWindowsControlsGridView="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.GridView"
-           Title="ChildWindowPopupRadGrid" Width="300"
+           Title="ChildWindowPopupRadGrid" 
            Style="{StaticResource ChildWindowStyle}"
            xmlns:local="clr-namespace:RadComboBoxTest">
     <Grid x:Name="LayoutRoot" Margin="2">
@@ -30,7 +30,7 @@
                 <telerikWindowsControlsGridView:RadGridView Grid.Row="1" x:Name="theRadGrid" IsFilteringAllowed="True" Margin="0,0,0,0" RowIndicatorVisibility="Collapsed"
                                                         Padding="0,0,0,0" ShowGroupPanel="False" AutoGenerateColumns="False" FontSize="12" 
                                                         CanUserDeleteRows="False" CanUserInsertRows="False" IsReadOnly="True" CanUserSelect="False"
-                                                            CustomLayout="True" IsAutoHeightOnCustomLayout="True" MaxHeight="250"
+                                                            IsAutoHeightOnCustomLayout="True" MaxHeight="250" IsAutoWidthOnCustomLayout="True"
                                                         >
                     <telerikWindowsControlsGridView:RadGridView.Columns>
 

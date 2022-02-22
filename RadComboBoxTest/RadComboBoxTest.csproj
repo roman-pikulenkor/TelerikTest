@@ -21,6 +21,9 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="SliderFilteringControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Styles_SISE.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -56,6 +59,8 @@
     <Compile Include="ChildWindowPopupRadGrid.xaml.cs" />
     <Compile Include="ItemBatchInternal.cs" />
     <Compile Include="MainPage.xaml.cs" />
+    <Compile Include="SliderFilteringControl.xaml.cs" />
+    <Compile Include="SliderFilterViewModel.cs" />
     <Compile Include="TestDataGrid.xaml.cs" />
     <Compile Include="TestRadComboBox.xaml.cs" />
     <Compile Include="TestRadDropDownButton.xaml.cs" />

@@ -4,7 +4,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:RadComboBoxTest">
     
-    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
-        <Button Content="Show Popup" Click="Button_Click" Width="100"/>
-    </Grid>
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Button Content="Show Popup" Click="Button_Click" Width="100" Margin="10"/>
+
+        <local:SliderFilteringControl Width="150" Height="200"/>
+    </StackPanel>
 </Page>
