@@ -2,11 +2,23 @@
     x:Class="RadComboBoxTest.TestSISEControls"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:RadComboBoxTest">
+    xmlns:local="clr-namespace:RadComboBoxTest"
+    xmlns:controlsEx="http://schemas.telerik.com/2008/xaml/presentation">
     
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-        <Button Content="Show Popup" Click="Button_Click" Width="100" Margin="10"/>
+        <!--<Button Content="Show Popup" Click="Button_Click" Width="100" Margin="10"/>
 
-        <local:SliderFilteringControl Width="150" Height="200"/>
+        <local:SliderFilteringControl Width="150" Height="100" Margin="10"/>-->
+        <controlsEx:RadNumericUpDown
+            Margin="10"
+            Value="50" 
+            IsEditable="True" 
+            Minimum="-88" 
+            Maximum="88" 
+            CustomUnit="mph" 
+            AutoReverse="True" 
+            NumberDecimalDigits="0"
+            UpdateValueToMatchTextOnLostFocus="True">
+        </controlsEx:RadNumericUpDown>
     </StackPanel>
 </Page>

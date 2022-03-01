@@ -29,6 +29,8 @@ namespace RadComboBoxTest
             //var mainPage = new TestRadTreeListView();
             //var mainPage = new TestRadListBox();
             var mainPage = new TestSISEControls();
+            //var mainPage = new TestRadTabControl();
+            //var mainPage = new TestRadToolBar();
 
             Window.Current.Content = mainPage;
         }

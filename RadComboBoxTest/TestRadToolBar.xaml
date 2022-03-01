@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="RadComboBoxTest.TestRadToolBar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Telerik.Windows.Controls"
+    xmlns:local="clr-namespace:RadComboBoxTest">
+    
+    <Grid Height="50">
+        <controls:RadToolBar Grid.Row="1" CustomLayout="True" Width="150">
+            <controls:RadButton Content="FILE" />
+            <controls:RadButton Content="EDIT" />
+            <controls:RadButton Content="VIEW" />
+            <controls:RadButton Content="VIEW1" />
+            <!--<controls:RadButton Content="VIEW2" />
+                <controls:RadButton Content="VIEW3" />
+                <controls:RadButton Content="VIEW4" />
+                <controls:RadButton Content="VIEW5" />
+                <controls:RadButton Content="VIEW6" />-->
+        </controls:RadToolBar>
+    </Grid>
+</Page>

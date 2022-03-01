@@ -43,6 +43,12 @@
     <Page Include="TestRadListBox.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TestRadTabControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TestRadToolBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TestRadTreeListView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -65,6 +71,8 @@
     <Compile Include="TestRadComboBox.xaml.cs" />
     <Compile Include="TestRadDropDownButton.xaml.cs" />
     <Compile Include="TestRadListBox.xaml.cs" />
+    <Compile Include="TestRadTabControl.xaml.cs" />
+    <Compile Include="TestRadToolBar.xaml.cs" />
     <Compile Include="TestRadTreeListView.xaml.cs" />
     <Compile Include="TestRadTreeView.xaml.cs" />
     <Compile Include="TestSISEControls.xaml.cs" />

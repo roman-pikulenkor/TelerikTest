@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="RadComboBoxTest.TestRadTabControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+    xmlns:telerikNavigationPrimitives="clr-namespace:Telerik.Windows.Controls.Primitives;assembly=Telerik.Windows.Controls.Navigation"
+    xmlns:local="clr-namespace:RadComboBoxTest">
+    
+    <Grid Margin="100">
+        <telerik:RadTabControl CustomLayout="True" Grid.Row="1" telerik:StyleManager.Theme="Windows8" 
+                                    HorizontalAlignment="Stretch" TabStripPlacement="Left" TabOrientation="Vertical">
+            <telerik:RadTabControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <telerikNavigationPrimitives:TabWrapPanel Align="Left" HorizontalAlignment="Left" TabStripPlacement="Top"/>
+                    <!--<VirtualizingStackPanel/>-->
+                </ItemsPanelTemplate>
+            </telerik:RadTabControl.ItemsPanel>
+
+            <telerik:RadTabControl.Items>
+                <telerik:RadTabItem Header="Tab 1" Content="Item 1">
+                    <Border>
+                        <TextBlock Text="This is Tab1"/>
+                    </Border>
+                </telerik:RadTabItem>
+                <telerik:RadTabItem Header="Tab 2" Content="Item 2">
+                    <Border>
+                        <TextBlock Text="This is Tab2"/>
+                    </Border>
+                </telerik:RadTabItem>
+            </telerik:RadTabControl.Items>
+        </telerik:RadTabControl>
+    </Grid>
+</Page>
