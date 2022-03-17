@@ -31,6 +31,12 @@
     <Page Include="Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Telerik.Windows.Controls.Navigation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Telerik.Windows.Controls.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TestDataGrid.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -11,7 +11,7 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="400"/>
         </Grid.RowDefinitions>
-        <telerik:RadTreeView x:Name="radTreeView" Grid.Row="0" Height="50" BorderThickness="1" BorderBrush="#ff00ffff" 
+        <!--<telerik:RadTreeView x:Name="radTreeView" Grid.Row="0" Height="50" BorderThickness="1" BorderBrush="#ff00ffff" 
                               CustomLayout="True" IsVirtualizing="True"
                              IsDragDropEnabled="True">
             <telerik:RadTreeViewItem Header="1.Futsal"/>
@@ -23,7 +23,7 @@
             <telerik:RadTreeViewItem Header="7.Futsal"/>
             <telerik:RadTreeViewItem Header="8.Soccer"/>
             <telerik:RadTreeViewItem Header="9.Futsal"/>
-        </telerik:RadTreeView>
+        </telerik:RadTreeView>-->
 
         <Button Click="UpdateButton_Click1" Content="Move on CSS" Grid.Row="1" Visibility="Collapsed"/>
         <Button Click="UpdateButton_Click2" Content="Move on CustomLayout" Grid.Row="1"/>
@@ -202,7 +202,7 @@
             </telerik:RadTreeViewItem>
         </telerik:RadTreeView>-->
 
-        <!--<telerik:RadComboBox
+        <telerik:RadComboBox
             Grid.Row="0"
             Width="200"
             Margin="10">
@@ -224,6 +224,6 @@
             <telerik:RadComboBoxItem Content="Item 2" />
             <telerik:RadComboBoxItem Content="Item 1" />
             <telerik:RadComboBoxItem Content="Item 2" />
-        </telerik:RadComboBox>-->
+        </telerik:RadComboBox>
     </Grid>
 </Page>

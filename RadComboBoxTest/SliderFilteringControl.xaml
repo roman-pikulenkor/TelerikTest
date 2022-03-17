@@ -21,8 +21,9 @@
                        IsSnapToTickEnabled="True"
                        TickPlacement="TopLeft"
                        IsMoveToPointEnabled="True"
-                       Width="360" Height="80"
+                       Width="360"
                        Margin="2, 14, 2, 2"
+                                IsAutoHeightOnCustomLayout="True"
                                 Minimum="0" Maximum="10"
                                 TickFrequency="1"
                                 SelectionStart="1"
@@ -31,7 +32,7 @@
                                 ValueChanged="slider_ValueChanged">
                 <Controls:RadSlider.TickTemplate>
                     <DataTemplate>
-                        <TextBlock FontSize="8" Text="{Binding Converter={StaticResource SliderTickConverter}}"/>
+                        <TextBlock FontSize="8" FontFamily="Segoe UI" FontWeight="600" Text="{Binding Converter={StaticResource SliderTickConverter}}"/>
                     </DataTemplate>
                 </Controls:RadSlider.TickTemplate>
             </Controls:RadSlider>
@@ -40,7 +41,8 @@
               Content="Clear"
               Click="OnClear"
               Width="80"
-              Margin="2"/>
+              Margin="2"
+                    />
         </Grid>
     </Border>
 </UserControl>

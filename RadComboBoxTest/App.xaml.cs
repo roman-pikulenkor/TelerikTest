@@ -16,7 +16,7 @@ namespace RadComboBoxTest
             this.InitializeComponent();
 
             Application.Current.Host.Settings.EnableOptimizationWhereCollapsedControlsAreNotLoaded = true;
-            //Telerik.Windows.Controls.Animation.AnimationManager.IsGlobalAnimationEnabled = false;
+            Telerik.Windows.Controls.Animation.AnimationManager.IsGlobalAnimationEnabled = false;
 
             Console.WriteLine("Loading done 1");
             // Enter construction logic here...

@@ -9,6 +9,8 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Styles.xaml"/>
                 <ResourceDictionary Source="Styles_SISE.xaml"/>
+                <ResourceDictionary Source="Telerik.Windows.Controls.Navigation.xaml"/>
+                <!--<ResourceDictionary Source="Telerik.Windows.Controls.xaml"/>-->
             </ResourceDictionary.MergedDictionaries>
             
         </ResourceDictionary>

@@ -6,9 +6,9 @@
     xmlns:controlsEx="http://schemas.telerik.com/2008/xaml/presentation">
     
     <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-        <!--<Button Content="Show Popup" Click="Button_Click" Width="100" Margin="10"/>
+        <Button Content="Show Popup" Click="Button_Click" Width="100" Margin="10" Opacity="0"/>
 
-        <local:SliderFilteringControl Width="150" Height="100" Margin="10"/>-->
+        <local:SliderFilteringControl Width="150" Height="100" Margin="10"/>
         <controlsEx:RadNumericUpDown
             Margin="10"
             Value="50" 
@@ -18,7 +18,15 @@
             CustomUnit="mph" 
             AutoReverse="True" 
             NumberDecimalDigits="0"
-            UpdateValueToMatchTextOnLostFocus="True">
+            UpdateValueToMatchTextOnLostFocus="True"
+            Opacity="0">
         </controlsEx:RadNumericUpDown>
+        <controlsEx:RadMaskedNumericInput Culture="en-US"                                 
+                               InputBehavior="Replace" 
+                               Mask="#9.2" 
+                               TextMode="PlainText" 
+                               UpdateValueEvent="PropertyChanged"
+                               Value="12345"
+                                          Opacity="0"/>
     </StackPanel>
 </Page>

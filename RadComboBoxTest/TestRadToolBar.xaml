@@ -5,17 +5,15 @@
     xmlns:controls="using:Telerik.Windows.Controls"
     xmlns:local="clr-namespace:RadComboBoxTest">
     
-    <Grid Height="50">
-        <controls:RadToolBar Grid.Row="1" CustomLayout="True" Width="150">
-            <controls:RadButton Content="FILE" />
-            <controls:RadButton Content="EDIT" />
-            <controls:RadButton Content="VIEW" />
-            <controls:RadButton Content="VIEW1" />
-            <!--<controls:RadButton Content="VIEW2" />
-                <controls:RadButton Content="VIEW3" />
-                <controls:RadButton Content="VIEW4" />
-                <controls:RadButton Content="VIEW5" />
-                <controls:RadButton Content="VIEW6" />-->
+    <Grid Margin="250">
+        <controls:RadToolBar x:Name="toolbar" Grid.Row="1" CustomLayout="True" Height="50">
+            <controls:RadButton Content="FILE" Click="FileButton_Click" />
+            <controls:RadButton Content="EDIT" Click="EditButton_Click"/>
+            <controls:RadButton Content="VIEW" Click="ViewButton_Click"/>
+            <controls:RadButton Content="VIEW1" Click="View1Button_Click"/>
+            <controls:RadButton Content="VIEW2" Click="View2Button_Click"/>
+            <controls:RadButton Content="VIEW3" Click="View3Button_Click"/>
+            <controls:RadButton Content="VIEW4" Click="View4Button_Click"/>
         </controls:RadToolBar>
     </Grid>
 </Page>
