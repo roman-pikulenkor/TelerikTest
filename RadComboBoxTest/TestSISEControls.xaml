@@ -5,10 +5,10 @@
     xmlns:local="clr-namespace:RadComboBoxTest"
     xmlns:controlsEx="http://schemas.telerik.com/2008/xaml/presentation">
     
-    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+    <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="200">
         <Button Content="Show Popup" Click="Button_Click" Width="100" Margin="10" Opacity="0"/>
 
-        <local:SliderFilteringControl Width="150" Height="100" Margin="10"/>
+        <local:SliderFilteringControl Width="150" Height="100" Margin="10" Visibility="Collapsed"/>
         <controlsEx:RadNumericUpDown
             Margin="10"
             Value="50" 
@@ -19,14 +19,64 @@
             AutoReverse="True" 
             NumberDecimalDigits="0"
             UpdateValueToMatchTextOnLostFocus="True"
-            Opacity="0">
+             Visibility="Collapsed">
         </controlsEx:RadNumericUpDown>
-        <controlsEx:RadMaskedNumericInput Culture="en-US"                                 
-                               InputBehavior="Replace" 
-                               Mask="#9.2" 
-                               TextMode="PlainText" 
-                               UpdateValueEvent="PropertyChanged"
-                               Value="12345"
-                                          Opacity="0"/>
+
+        <TextBlock Margin="0 20 0 0" Text="MaskedNumericInput"/>
+        <controlsEx:RadMaskedNumericInput 
+            Width="200"
+            Culture="en-US"               
+            IsClearButtonVisible="True"
+            InputBehavior="Insert" 
+            AllowSkipPlaceholders="True"
+            AutoFillZeros="True"
+            Mask="#9.2" 
+            TextMode="PlainText" 
+            UpdateValueEvent="PropertyChanged"
+            Value="0"/>
+
+        <TextBlock Margin="0 20 0 0" Text="MaskedCurrencyInput"/>
+        <controlsEx:RadMaskedCurrencyInput 
+            x:Name="radMaskedCurrencyInput" Width="200"  
+            AllowSkipPlaceholders="True"
+            AutoFillNumberGroupSeparators="True"
+            AutoFillZeros="True"
+            Culture="en-US"
+            FormatString=""
+            EmptyContent=""
+            InputBehavior="Insert"
+            IsClearButtonVisible="True"
+            IsCurrencySymbolVisible="True"
+            Mask="#9.2"
+            SelectionOnFocus="Unchanged"
+            SpinMode="Position"
+            TextMode="MaskedText"
+            UpdateValueEvent="PropertyChanged"
+            Value="12345.67" />
+
+        <TextBlock Margin="0 20 0 0" Text="MaskedDateTimeInput"/>
+        <controlsEx:RadMaskedDateTimeInput
+            Width="200"
+            Mask="dd-MM-yyyy"
+            Culture="en-US"
+            EmptyContent=""
+            IsClearButtonVisible="False"
+            SelectionOnFocus="Unchanged"
+            SpinMode="Position"
+            TextMode="MaskedText"
+            UpdateValueEvent="PropertyChanged"/>
+
+        <TextBlock Margin="0 20 0 0" Text="MaskedTextInput"/>
+        <controlsEx:RadMaskedTextInput
+            Width="200"
+            EmptyContent=""
+            UpdateValueEvent="PropertyChanged"
+            SpinMode="None"
+            IsClearButtonVisible="False"
+            TextMode="PlainText"
+            Mask="###-##-####"/>
+
+        <TextBlock Margin="0 20 0 0" Text="TextBox"/>
+        <TextBox Text="Text here!" MaxLength="15"/>
     </StackPanel>
 </Page>
